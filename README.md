@@ -22,13 +22,12 @@ Install and use by directly including the [browser files](dist):
 ```html
 <head>
   <title>My A-Frame Scene</title>
-  <script src="https://aframe.io/releases/0.6.0/aframe.min.js"></script>
+  <script src="https://aframe.io/releases/0.7.1/aframe.min.js"></script>
   <script src="https://unpkg.com/aframe-camera-transform-controls-component/dist/aframe-camera-transform-controls-component.min.js"></script>
 </head>
 
 <body>
-  <a-scene>
-    <a-entity camera-transform-controls="foo: bar"></a-entity>
+  <a-scene camera-transform-controls="">
   </a-scene>
 </body>
 ```
