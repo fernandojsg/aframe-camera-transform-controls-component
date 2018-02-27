@@ -1,0 +1,6 @@
+.DS_Store
+.sw[ponm]
+examples/build.js
+gh-pages
+node_modules/
+npm-debug.log
