@@ -11,7 +11,12 @@ For [A-Frame](https://aframe.io).
 
 | Property | Description | Default Value |
 | -------- | ----------- | ------------- |
-|          |             |               |
+| enabled         |             | true              |
+| cameraRigId         | Camera rig containing the camera and both controllers            | cameraRig               |
+| onStart         | Event used to start the panning or scale & rotate              | triggerdown              |
+| onEnd         | Event used to stop panning or scale & rotate            | triggerup |
+| showHint         | Show a line between both controllers and the scale factor    | true              |
+
 
 ### Installation
 
