@@ -41,7 +41,7 @@ AFRAME.registerComponent('hint-scale', {
   },
 
   tick: function () {
-    if (true || this.el.getAttribute('visible') === true) {
+    if (this.el.getAttribute('visible') === true) {
 
       var posL = new THREE.Vector3();
       var posR = new THREE.Vector3();
@@ -206,15 +206,11 @@ AFRAME.registerComponent('camera-transform-controls', {
    */
   twoHandInteraction: (function () {
     var centerVec3 = new THREE.Vector3();
-    var currentControllersSegment = new THREE.Line3();
     var currentDistanceVec3 = new THREE.Vector3();
     var currentPositionLeft = new THREE.Vector3();
     var currentPositionRight = new THREE.Vector3();
-    var deltaCurrentSegment = new THREE.Vector3();
-    var deltaPreviousSegment = new THREE.Vector3();
     var midPoint = new THREE.Vector3();
     var prevDistanceVec3 = new THREE.Vector3();
-    var previousControllersSegment = new THREE.Line3();
 
     return function () {
       var currentAngle;
