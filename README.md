@@ -3,9 +3,11 @@
 [![Version](http://img.shields.io/npm/v/aframe-camera-transform-controls-component.svg?style=flat-square)](https://npmjs.org/package/aframe-camera-transform-controls-component)
 [![License](http://img.shields.io/npm/l/aframe-camera-transform-controls-component.svg?style=flat-square)](https://npmjs.org/package/aframe-camera-transform-controls-component)
 
-A Camera Transform Controls component for A-Frame.
+A Camera Transform Controls component for [A-Frame](https://aframe.io).
 
-For [A-Frame](https://aframe.io).
+<p align="center">
+<a href="https://fernandojsg.github.io/aframe-camera-transform-controls-component/"><img src="readme.gif" alt="Recording component"></a>
+</p>
 
 ### API
 
