@@ -86,31 +86,32 @@
 	    }
 	  },
 
-	  tick: function () {
-	    if (this.el.getAttribute('visible') === true) {
-
-	      var posL = new THREE.Vector3();
-	      var posR = new THREE.Vector3();
-	  
-	      posL = this.leftEl.getAttribute('position');
-	      posR = this.rightEl.getAttribute('position');
-	  
-	      var mid = new THREE.Vector3();
-	      mid.subVectors(posL, posR).multiplyScalar(0.5).add(posR);
-	      this.middle.setAttribute('position', mid);
-	      
-	      mid.y += 0.025;
-	      this.text.setAttribute('position', mid);
-	      this.text.object3D.lookAt(this.cameraObject.position);
+	  tick: (function () {
+	    return function () {
 
 	      var linePosL = new THREE.Vector3();
 	      var linePosR = new THREE.Vector3();
-	      linePosR.copy(posR);
-	      linePosL.copy(posL);
+	      var mid = new THREE.Vector3();
 
-	      this.line.setAttribute('line', {start: linePosL, end: linePosR}); 
+	      if (this.el.getAttribute('visible') === true) {
+
+	        var posL = this.leftEl.getAttribute('position');
+	        var posR = this.rightEl.getAttribute('position');
+	    
+	        mid.subVectors(posL, posR).multiplyScalar(0.5).add(posR);
+	        this.middle.setAttribute('position', mid);
+	        
+	        mid.y += 0.025;
+	        this.text.setAttribute('position', mid);
+	        this.text.object3D.lookAt(this.cameraObject.position);
+	  
+	        linePosR.copy(posR);
+	        linePosL.copy(posL);
+	  
+	        this.line.setAttribute('line', {start: linePosL, end: linePosR}); 
+	      }
 	    }
-	  }
+	  })()
 	});
 
 	/**
@@ -386,7 +387,6 @@
 	  }
 	  return angle;
 	}
-
 
 /***/ })
 /******/ ]);
