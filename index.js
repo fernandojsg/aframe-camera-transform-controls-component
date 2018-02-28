@@ -76,8 +76,8 @@ AFRAME.registerComponent('camera-transform-controls', {
   schema: {
     enabled: {default: true},
     cameraRigId: {default: 'cameraRig'},
-    onStart: {default: 'triggerdown'},
-    onEnd: {default: 'triggerup'},
+    onStart: {default: 'gripdown'},
+    onEnd: {default: 'gripup'},
     showHint: {default: true}
   },
 
